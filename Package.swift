@@ -42,7 +42,7 @@ let package = Package(
             cSettings: [
                 .define("GGML_USE_ACCELERATE"),
                 .define("WHISPER_USE_COREML"),
-                .define("WHISPER_COREML_ALLOW_FALLBACK")
+                //.define("WHISPER_COREML_ALLOW_FALLBACK")
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
                 // We should consider add this in the future when we drop support for iOS 14
                 // (ref: ref: https://developer.apple.com/documentation/accelerate/1513264-cblas_sgemm?language=objc)
