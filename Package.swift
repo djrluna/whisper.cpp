@@ -43,7 +43,6 @@ let package = Package(
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
                 .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
-                .define("WHISPER_USE_COREML", .when(platforms: [.macOS, .macCatalyst, .iOS])),
                 .define("GGML_USE_METAL")
                 //.define("WHISPER_COREML_ALLOW_FALLBACK")
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
