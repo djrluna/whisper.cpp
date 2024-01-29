@@ -29,7 +29,6 @@
 #    define WHISPER_API
 #endif
 
-#define WHISPER_USE_COREML 1
 #define WHISPER_SAMPLE_RATE 16000
 #define WHISPER_N_FFT       400
 #define WHISPER_HOP_LENGTH  160
