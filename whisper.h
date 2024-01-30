@@ -36,6 +36,11 @@
 #define WHISPER_HOP_LENGTH  160
 #define WHISPER_CHUNK_SIZE  30
 
+
+//#ifdef WHISPER_USE_COREML
+//#include "coreml/whisper-encoder.h"
+//#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
