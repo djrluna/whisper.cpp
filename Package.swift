@@ -24,6 +24,7 @@ let package = Package(
             exclude: [
                "bindings",
                "cmake",
+               //"coreml",
                "examples",
                "extra",
                "models",
@@ -36,11 +37,15 @@ let package = Package(
             ],
             sources: [
                 "whisper.cpp",
+                "coreml/whisper-encoder.h",
+                "coreml/whisper-encoder.mm",
+                "coreml/whisper-encoder-impl.h",
+                "coreml/whisper-encoder-impl.m",
             ],
             publicHeadersPath: "spm-headers",
             cSettings: [
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
-//                .define("GGML_USE_ACCELERATE"),
+                .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
 //                .define("GGML_USE_METAL")
                 .define("WHISPER_USE_COREML"),
