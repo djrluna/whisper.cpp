@@ -58,7 +58,7 @@ let package = Package(
             ],
             linkerSettings: [
                 .linkedFramework("Accelerate"),
-                .linkedLibrary("CoreML")
+                .linkedFramework("CoreML")
             ]
         )
     ],
