@@ -6,7 +6,7 @@ let package = Package(
     name: "whisper",
     platforms: [
         .macOS(.v12),
-        .iOS(.v14),
+        .iOS(.v15),
         .watchOS(.v4),
         .tvOS(.v14)
     ],
@@ -40,6 +40,8 @@ let package = Package(
                 "coreml/whisper-encoder.mm",
                 "coreml/whisper-encoder-impl.h",
                 "coreml/whisper-encoder-impl.m",
+                "ggml-metal.h",
+                "ggml-metal.m"
             ],
             publicHeadersPath: "spm-headers",
             cSettings: [
