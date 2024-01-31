@@ -41,7 +41,7 @@ let package = Package(
                 "coreml/whisper-encoder-impl.h",
                 "coreml/whisper-encoder-impl.m",
                 "ggml-metal.h",
-                "ggml-metal.m"
+                "ggml-metal.m",
             ],
             publicHeadersPath: "spm-headers",
             cSettings: [
