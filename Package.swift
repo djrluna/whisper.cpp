@@ -24,6 +24,7 @@ let package = Package(
             exclude: [
                "bindings",
                "cmake",
+               "coreml",
                "examples",
                "extra",
                "models",
@@ -36,19 +37,15 @@ let package = Package(
             ],
             sources: [
                 "whisper.cpp",
-                "coreml/whisper-encoder.h",
-                "coreml/whisper-encoder.mm",
-                "coreml/whisper-encoder-impl.h",
-                "coreml/whisper-encoder-impl.m",
-                "ggml-metal.h",
-                "ggml-metal.m",
+                "common.cpp"
             ],
+            resources: [
+                        .process("ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
             cSettings: [
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
                 .define("GGML_USE_ACCELERATE"),
-                .define("WHISPER_USE_COREML"),
-                .define("WHISPER_COREML_ALLOW_FALLBACK"),
+                .unsafeFlags(["-fno-objc-arc"]),
                 .define("GGML_USE_METAL")
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
                 // We should consider add this in the future when we drop support for iOS 14
