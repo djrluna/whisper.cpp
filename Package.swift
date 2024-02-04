@@ -36,7 +36,7 @@ let package = Package(
                "Makefile"
             ],
             sources: [
-                "ggml.c",
+                //"ggml.c",
                 "whisper.cpp",
                 "ggml-alloc.c",
                 //"ggml-backend.c",
