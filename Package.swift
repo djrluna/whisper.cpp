@@ -36,14 +36,18 @@ let package = Package(
                "Makefile"
             ],
             sources: [
+                "ggml.c",
                 "whisper.cpp",
-                "common.cpp"
+                "ggml-alloc.c",
+                "ggml-backend.c",
+                "ggml-quants.c",
+                "ggml-metal.m"
             ],
             resources: [
                         .process("ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
             cSettings: [
-                .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
+                //.unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
                 .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
                 .define("GGML_USE_METAL")
@@ -54,8 +58,7 @@ let package = Package(
                 // .define("ACCELERATE_LAPACK_ILP64")
             ],
             linkerSettings: [
-                .linkedFramework("Accelerate"),
-                .linkedFramework("CoreML")
+                .linkedFramework("Accelerate")
             ]
         )
     ],
