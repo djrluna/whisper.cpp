@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "whisper",
-            dependencies: ["ggml"],
+            //dependencies: ["ggml"],
             path: ".",
             exclude: [
                "bindings",
