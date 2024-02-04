@@ -39,7 +39,7 @@ let package = Package(
                 "ggml.c",
                 "whisper.cpp",
                 "ggml-alloc.c",
-                "ggml-backend.c",
+                //"ggml-backend.c",
                 "ggml-quants.c",
                 "ggml-metal.m"
             ],
