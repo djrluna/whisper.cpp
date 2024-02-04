@@ -38,7 +38,7 @@ let package = Package(
             sources: [
                 //"ggml.c",
                 "whisper.cpp",
-                "ggml-alloc.c",
+                //"ggml-alloc.c",
                 //"ggml-backend.c",
                 //"ggml-quants.c",
                 "ggml-metal.m"
