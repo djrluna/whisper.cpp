@@ -53,7 +53,8 @@ let package = Package(
                 // .define("ACCELERATE_LAPACK_ILP64")
             ],
             linkerSettings: [
-                .linkedFramework("Accelerate")
+                .linkedFramework("Accelerate"),
+                .linkedFramework("Metal")
             ]
         )
     ],
